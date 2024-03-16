@@ -11,9 +11,10 @@ with open('books.csv', encoding='utf-8') as file:
     data = list(csv.reader(file, delimiter=';'))[1:]
 
 
-    #  поиск ведётся по автору!!! (выдаётся только одна книга, так как
+    #  поиск ведётся по автору!!!
     iid = input()
     while iid != 'хватит':
+        s = []
         r = search(iid, data)
         if iid == '':
             print('Данного автора в этой библиотеке нет')
